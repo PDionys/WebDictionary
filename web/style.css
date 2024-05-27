@@ -1,0 +1,115 @@
+header{
+    background-color: #333;
+    padding: 30px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.7);
+}
+            
+.search-box{
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"]{
+    width: 500px;
+    background-image: url('/WebDictionary/img/search.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 15px 45px;
+    margin-right: 10px;
+    font-size: 18px;
+    text-align: left;
+    color: black;
+    background-color: #ffffff;
+}
+
+input[type="submit"]{
+    padding: 20px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover{
+    background-color: #45a049;
+}
+
+button{
+    padding: 20px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover{
+    background-color: #45a049;
+}
+
+.login-register{
+    display: flex;
+    gap: 10px;
+}
+
+select{
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+    margin-left: 10px;
+}
+
+select:hover{
+    border-color: #999;
+}
+
+select:focus{
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgb(0, 123, 255, 0.25);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to bottom, white, #dddddd);
+}
+
+.dictionary-box {
+    background-color: #ffffff; /* White box */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+    font-size: 18px;
+    margin-left: 25%;
+    margin-top: 30px;
+  }
+  
+  p {
+    margin: 0;
+    color: #666666; /* Light grey text */
+  }
+  h2 {
+    margin-bottom: 10px;
+    color: #333333; /* Dark grey text */
+  }
+
+table, th, td {
+  border:1px solid black;
+}

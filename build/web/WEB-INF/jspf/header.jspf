@@ -1,0 +1,48 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<header>
+    <c:choose>
+        <c:when test="${sessionScope.LOGIN eq 'TRUE'}">
+            <c:set var="action" value="home"/>
+        </c:when>
+        <c:otherwise>
+            <c:set var="action" value="browes"/>
+        </c:otherwise>
+    </c:choose>
+    <form action="${action}" method="POST">
+        <div class="search-box">
+            <input type="text" placeholder="Напишіть слово" id="word" name="word">
+            <input type="submit" value="Знайти"/>
+            <select name="language" id="language">
+                <option value="us">English(USA)</option>
+                <option value="ua">Українська</option>
+            </select>
+            <select name="dict-type" id="dic-type">
+                <option value="expl">Тлумачний</option>
+                <option value="biling">Перекладний</option>
+            </select>
+
+        </div>
+    </form>
+    
+    <div class="login-register">
+        <c:choose>
+            <c:when test="${sessionScope.LOGIN eq 'TRUE'}">
+                <form action="admin/home" method="POST">
+                    <input type="submit" value="${sessionScope.USERNAME}"/>
+                </form>
+                <form action="logout" method="POST">
+                    <input type="submit" value="Вийти"/>
+                </form>
+            </c:when>
+            <c:otherwise>
+                <form action="login" method="POST">
+                    <input type="submit" value="Війти"/>
+                </form>
+                <button>Зареєструватися</button>
+            </c:otherwise>
+        </c:choose>
+    </div>
+</header>
